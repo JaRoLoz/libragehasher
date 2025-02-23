@@ -10,7 +10,7 @@ HasherPool::~HasherPool()
 {
 }
 
-uint8_t* HasherPool::SearchHashesH(const uint8_t* keyHashes, const size_t keyCount, const size_t keySize)
+uint8_t* HasherPool::SearchHashesHeap(const uint8_t* keyHashes, const size_t keyCount, const size_t keySize)
 {
 	uint8_t* output = new uint8_t[keyCount * keySize];
 	this->SearchHashes(output, keyHashes, keyCount, keySize);

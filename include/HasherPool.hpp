@@ -17,7 +17,7 @@ public:
     HasherPool(const uint8_t* source, const size_t sourceSize);
     ~HasherPool();
 	void SearchHashes(uint8_t* output, const uint8_t *keyHashes, const size_t keyCount, const size_t keySize);
-    uint8_t* SearchHashesH(const uint8_t* keyHashes, const size_t keyCount, const size_t keySize);
+    uint8_t* SearchHashesHeap(const uint8_t* keyHashes, const size_t keyCount, const size_t keySize);
 
 private:
     void SearchHashesThread(size_t index, uint8_t* output, const uint8_t* keyHashes, const size_t keyCount, const size_t keySize);
